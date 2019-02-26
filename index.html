@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Web Components</title>
-  <script src="modal.js"></script>
-</head>
-<body>
-  <uc-modal >
-    <h1 slot="title">The Modal Title</h1>
-    <p>This is our forst web component</p>
-  </uc-modal>
-  <script>
-    const modal = document.querySelector('uc-modal');
-    setTimeout(() => {
-      modal.open();
-    }, 3000);
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Components</title>
+    <style>
+      div {
+        border: 2px solid orange;
+      }
+    </style>
+    <script src="./tooltip.js"></script>
+    <script src="./confirm-link.js"></script>
+  </head>
+  <body>
+
+    <p>
+      <uc-tooltip text="Web Componentsis a set of standards"
+        >Web Components</uc-tooltip
+      >
+      are awesome!
+    </p>
+    <uc-tooltip></uc-tooltip>
+    <div>This will not get the tooltip component styles</div>
+    <a is="uc-confirm-link" href="https://www.google.com">Google</a>
+  </body>
 </html>
