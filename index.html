@@ -6,23 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web Components</title>
     <style>
-      div {
-        border: 2px solid orange;
+      #info-box {
+        display: none;
       }
     </style>
-    <script src="./tooltip.js"></script>
-    <script src="./confirm-link.js"></script>
   </head>
   <body>
+    <button>Show</button>
+    <p id="info-box">More infos!</p>
 
-    <p>
-      <uc-tooltip text="Web Componentsis a set of standards"
-        >Web Components</uc-tooltip
-      >
-      are awesome!
-    </p>
-    <uc-tooltip></uc-tooltip>
-    <div>This will not get the tooltip component styles</div>
-    <a is="uc-confirm-link" href="https://www.google.com">Google</a>
+    <script>
+      const button = document.querySelector('button');
+      const infoEl = document.querySelector('p');
+
+      let isHidden = true;
+
+      button.addEventListener('click', () => {
+        if (isHidden) {
+          infoEl.style.display = 'block';
+          button.textContent = 'Hide';
+          isHidden = false;
+        } else {
+          infoEl.style.display = 'none';
+          button.textContent = 'Show';
+          isHidden = true;
+        }
+      });
+    </script>
   </body>
 </html>
