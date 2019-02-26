@@ -21,6 +21,9 @@ class CustomButton extends HTMLElement {
     this._button = this.shadowRoot.querySelector('button');
   }
   connectedCallback() {
+    if(this.hasAttribute('is-visible')){
+      this.isHidden = !this.getAttribute('is-visible');
+    }
     this._button.addEventListener('click', this._clickListener.bind(this))
     this._toggleText();
   }
