@@ -40,15 +40,27 @@ export namespace Components {
     */
     'middle'?: string;
   }
+
+  interface UcSideDrawer {
+    'open': () => void;
+    'opened': boolean;
+    'title': string;
+  }
+  interface UcSideDrawerAttributes extends StencilHTMLAttributes {
+    'opened'?: boolean;
+    'title'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'MyComponent': Components.MyComponent;
+    'UcSideDrawer': Components.UcSideDrawer;
   }
 
   interface StencilIntrinsicElements {
     'my-component': Components.MyComponentAttributes;
+    'uc-side-drawer': Components.UcSideDrawerAttributes;
   }
 
 
@@ -58,12 +70,20 @@ declare global {
     new (): HTMLMyComponentElement;
   };
 
+  interface HTMLUcSideDrawerElement extends Components.UcSideDrawer, HTMLStencilElement {}
+  var HTMLUcSideDrawerElement: {
+    prototype: HTMLUcSideDrawerElement;
+    new (): HTMLUcSideDrawerElement;
+  };
+
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement
+    'uc-side-drawer': HTMLUcSideDrawerElement
   }
 
   interface ElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'uc-side-drawer': HTMLUcSideDrawerElement;
   }
 
 
