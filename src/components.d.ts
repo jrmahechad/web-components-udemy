@@ -50,17 +50,26 @@ export namespace Components {
     'opened'?: boolean;
     'title'?: string;
   }
+
+  interface UcTooltip {
+    'title': string;
+  }
+  interface UcTooltipAttributes extends StencilHTMLAttributes {
+    'title'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'MyComponent': Components.MyComponent;
     'UcSideDrawer': Components.UcSideDrawer;
+    'UcTooltip': Components.UcTooltip;
   }
 
   interface StencilIntrinsicElements {
     'my-component': Components.MyComponentAttributes;
     'uc-side-drawer': Components.UcSideDrawerAttributes;
+    'uc-tooltip': Components.UcTooltipAttributes;
   }
 
 
@@ -76,14 +85,22 @@ declare global {
     new (): HTMLUcSideDrawerElement;
   };
 
+  interface HTMLUcTooltipElement extends Components.UcTooltip, HTMLStencilElement {}
+  var HTMLUcTooltipElement: {
+    prototype: HTMLUcTooltipElement;
+    new (): HTMLUcTooltipElement;
+  };
+
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement
     'uc-side-drawer': HTMLUcSideDrawerElement
+    'uc-tooltip': HTMLUcTooltipElement
   }
 
   interface ElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'uc-side-drawer': HTMLUcSideDrawerElement;
+    'uc-tooltip': HTMLUcTooltipElement;
   }
 
 
