@@ -12,78 +12,32 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface UcSideDrawer {
-    'open': () => void;
-    'opened': boolean;
-    'title': string;
-  }
-  interface UcSideDrawerAttributes extends StencilHTMLAttributes {
-    'opened'?: boolean;
-    'title'?: string;
-  }
+  interface UcStockPrice {}
+  interface UcStockPriceAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
-    'UcSideDrawer': Components.UcSideDrawer;
+    'UcStockPrice': Components.UcStockPrice;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
-    'uc-side-drawer': Components.UcSideDrawerAttributes;
+    'uc-stock-price': Components.UcStockPriceAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLUcSideDrawerElement extends Components.UcSideDrawer, HTMLStencilElement {}
-  var HTMLUcSideDrawerElement: {
-    prototype: HTMLUcSideDrawerElement;
-    new (): HTMLUcSideDrawerElement;
+  interface HTMLUcStockPriceElement extends Components.UcStockPrice, HTMLStencilElement {}
+  var HTMLUcStockPriceElement: {
+    prototype: HTMLUcStockPriceElement;
+    new (): HTMLUcStockPriceElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
-    'uc-side-drawer': HTMLUcSideDrawerElement
+    'uc-stock-price': HTMLUcStockPriceElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
-    'uc-side-drawer': HTMLUcSideDrawerElement;
+    'uc-stock-price': HTMLUcStockPriceElement;
   }
 
 
