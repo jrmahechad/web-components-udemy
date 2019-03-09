@@ -2,7 +2,8 @@ dist/
 www/
 publishing-example-projects/node/node_modules
 publishing-example-projects/angular/node_modules
-publishing-example-projects/react.js/node_modul
+publishing-example-projects/react.js/node_modules
+publishing-example-projects/vue.js/node_modules
 
 
 *~
