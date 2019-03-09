@@ -1,6 +1,7 @@
 dist/
 www/
 publishing-example-projects/node/node_modules
+publishing-example-projects/angular/node_modules
 
 
 *~

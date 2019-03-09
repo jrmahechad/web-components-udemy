@@ -1,6 +1,6 @@
 {
-  "name": "component-starter",
-  "version": "0.0.1",
+  "name": "uc-components-starter-jm",
+  "version": "0.0.2",
   "description": "Stencil Component Starter",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
