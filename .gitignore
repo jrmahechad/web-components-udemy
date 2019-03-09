@@ -1,5 +1,7 @@
 dist/
 www/
+publishing-example-projects/node/node_modules
+
 
 *~
 *.sw[mnpcod]
